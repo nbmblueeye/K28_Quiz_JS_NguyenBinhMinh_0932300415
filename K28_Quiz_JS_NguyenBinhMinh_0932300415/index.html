@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>K28_Quiz_JS_NguyenBinhMinh_0932300415</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./fontawesome/all.min.css">
+</head>
+<body>
+
+	<div class="qlsv-main-box">
+		<h1 class="header">Quan ly sinh vien</h1>
+		<div>
+			<div id="error" class="error">
+			</div>
+			<form id="form-control-student">
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Ma sinh vien:</label>
+					</div>
+					<input type="text" id="student-id">
+				</div>
+
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Ten sinh vien:</label>	
+					</div>
+				
+					<input type="text" id="name">
+				</div>
+			
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Email sinh vien:</label>
+					</div>
+					<input type="text" id="email">
+				</div>
+				
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Diem toan:</label>
+					</div>
+					<input type="text" id="math">
+				</div>
+				
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Diem ly:</label>
+					</div>
+					<input type="text" id="physic">
+				</div>
+				
+				<div class="info-box">
+					<div class="label-box">
+						<label for="">Diem hoa:</label>
+					</div>
+					<input type="text" id="chemical">
+				</div>
+				
+				<button type="button" onclick="addNewStudent()">Them sinh vien</button>
+				<button type="button" onclick="resetStudents()">Xoa danh sach sinh vien</button>
+			</form>
+		
+			<table style="width: 600px; border-collapse: collapse;" border="1">
+				<thead>
+					<th>Ma Sinh Vien</th>
+					<th>Ten</th>
+					<th>Email</th>
+					<th>Diem trung binh</th>
+					<th>Thao tac</th>
+				</thead>
+				<tbody id="table-body">
+				</tbody>
+			</table>
+			<div id="edit-box" class="edit-box">
+				<div class="edit-box-wrapper">
+					<button id="close-edit-btn" class="close-btn" onclick="closeEditStudent()"><i class="fa-solid fa-xmark"></i></button>
+					<form id="form-edit-student">
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Ma sinh vien:</label>
+							</div>
+							<input type="text" id="edit-student-id">
+						</div>
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Ten sinh vien:</label>	
+							</div>
+						
+							<input type="text" id="edit-name">
+						</div>
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Email sinh vien:</label>
+							</div>
+							<input type="text" id="edit-email">
+						</div>
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Diem toan:</label>
+							</div>
+							<input type="text" id="edit-math">
+						</div>
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Diem ly:</label>
+							</div>
+							<input type="text" id="edit-physic">
+						</div>
+						<div class="info-box">
+							<div class="label-box">
+								<label for="">Diem hoa:</label>
+							</div>
+							<input type="text" id="edit-chemical">
+						</div>
+						<button type="button" id="edit-student-btn" onclick="updateStudent()">Cap Nhat Thong Tin</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./js/model/model.js"></script>
+	<script src="./js/controller/controller.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./fontawesome/all.min.js"></script>
+</body>
+</html>

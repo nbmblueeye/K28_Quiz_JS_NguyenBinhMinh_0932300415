@@ -1,0 +1,171 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	display: flex;
+	min-height: 100vh;
+	width: 100%;
+	font-size: 16px;
+}
+
+.qlsv-main-box{
+	margin: 0 auto;
+	margin-top: 3rem;
+	padding: 1rem;
+	height: fit-content;
+	background-color: aliceblue;
+	border-radius: 0.5rem;
+}
+
+.qlsv-main-box .header{
+	margin-bottom: 1rem;
+}
+
+.qlsv-main-box form{
+	margin-bottom: 2rem;
+}
+
+button{
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+	font-size: 16px;
+	outline: none !important;
+	border: 1px solid #111;
+	border-radius: 2px;
+}
+
+button:hover{
+	background-color: aqua;
+}
+
+.qlsv-main-box form button{
+	margin: 2rem 0;
+	margin-right: 1rem;
+}
+
+.qlsv-main-box form .info-box{
+	display: flex;
+	flex-direction: row;
+	padding: 0.25rem;
+}
+
+.qlsv-main-box form .info-box .label-box{
+	width: 20%;
+	
+}
+.qlsv-main-box form .info-box input{
+	padding: 0.5rem;
+	flex: 1;
+	outline: none;
+}
+
+.qlsv-main-box form .info-box input:hover,
+.qlsv-main-box form .info-box input:focus
+{
+	outline: 2px solid aqua;
+	outline-offset: 1px;
+}
+
+table th,
+table td
+{
+	padding: 0.5rem;
+	text-align: center;
+}
+
+table thead{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+table td .action
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+table #edit-btn{
+	padding: 0.25rem !important;
+	cursor: pointer;
+	font-size: 14px;
+	border-color: blue;
+}
+
+table #delete-btn{
+	padding: 0.25rem !important;
+	cursor: pointer;
+	font-size: 14px;
+	border-color: red;
+}
+
+.error{
+	color: red;
+	padding: 0.5rem 0;
+	display: none;
+}
+
+.error.show{
+	display: block;
+}
+
+.edit-box{
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 999;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.edit-box.active{
+	display: flex;
+}
+
+.edit-box-wrapper{
+	position: relative;
+	width: fit-content;
+	height: fit-content;
+}
+
+.edit-box-wrapper .close-btn{
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translate(50%, -50%);
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	outline: none;
+	border: none;
+	background-color: #111;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.edit-box-wrapper .close-btn:hover,
+.edit-box-wrapper .close-btn:focus
+{
+	background-color:#333;
+}
+
+.edit-box form{
+	padding: 1rem;
+	width: 600px;
+	height: fit-content;
+	border-radius: 0.5rem;
+	background-color: aliceblue;
+	z-index: 2000;
+}
+
+.edit-box form button{
+	margin-bottom: 0;
+}
